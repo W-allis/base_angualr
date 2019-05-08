@@ -1,0 +1,18 @@
+<div class="login-container">
+  <form>
+    <InputItem 
+      [clear]="true"
+      [value]="model.name"
+      [placeholder]="'start from rigth'">用户名</InputItem>
+  <br>
+    <InputItem 
+      [type]="'password'"
+      [clear]="true"
+      [value]="model.password"
+      [placeholder]="'请输入密码'">密码</InputItem>
+  </form>
+  <br>
+  <div Button [type]="'primary'" (click)="handleLogin()">登录</div>
+  <br>
+  <p>忘记密码？</p>
+</div>

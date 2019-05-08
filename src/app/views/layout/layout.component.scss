@@ -1,0 +1,17 @@
+@mixin fixed () {
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.header {
+  top: 0;
+  @include fixed()
+}
+
+.footer {
+  height: 45px;
+  bottom: 0;
+  background: cyan;
+  @include fixed()
+}

@@ -1,0 +1,9 @@
+{
+  "/ldaplogin": {
+    "target": "http://192.168.38.15:9905",
+    "secure": false,
+    "pathRewrite": {
+      "^/ldaplogin": "/ldaplogin"
+    }
+  }
+}
