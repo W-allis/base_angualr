@@ -39,7 +39,7 @@ export class RequestUtil {
   private requestHandler<T>(options: Options): Options {
     const headers: Options = {
       headers: {
-        'assecc-token': this.token.getToken()
+        'access-token': this.token.getToken() || ''
       },
       observe: 'response'
     }

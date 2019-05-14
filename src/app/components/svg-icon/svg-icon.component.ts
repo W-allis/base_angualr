@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IconsService } from 'src/app/icons/index.service';
 
 @Component({
   selector: 'app-svg-icon',
@@ -8,8 +7,7 @@ import { IconsService } from 'src/app/icons/index.service';
 })
 export class SvgIconComponent implements OnInit {
 
-  constructor(public icons: IconsService) {
-    console.dir(icons)
+  constructor() {
   }
 
   ngOnInit() {
