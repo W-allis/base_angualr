@@ -15,6 +15,7 @@ import { ThemeService } from './service/theme.service';
 import { FooterComponent } from './views/layout/components/footer/footer.component';
 import { AsyncRouterService } from './service/asyncRouter.service';
 import { ExampleDirective } from 'src/app/directives/example.directive';
+import { TestComponent } from './views/test/test.component';
 // import { ComponentsModule } from 'src/app/components/index.module';
 // import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 
@@ -34,6 +35,7 @@ const Pipes = []
     LayoutComponent,
     SimpleLayoutComponent,
     FooterComponent,
+    TestComponent,
     // SvgIconComponent
   ],
   imports: [

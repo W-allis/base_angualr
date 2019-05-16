@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   private activeTabIndex: number = 1
+  placeHolder: string = 'block'
 
   constructor(
     // public accessRoutes: AsyncRouterService

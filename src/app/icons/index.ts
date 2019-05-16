@@ -20,6 +20,5 @@ interface WebpackContext extends WebpackRequire {
 }
 */
 const iconMap = requireAll.keys().map(requireAll)
-console.log(iconMap)
 // tslint:disable-next-line
 
