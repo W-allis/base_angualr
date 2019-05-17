@@ -15,7 +15,6 @@ import { ThemeService } from './service/theme.service';
 import { FooterComponent } from './views/layout/components/footer/footer.component';
 import { AsyncRouterService } from './service/asyncRouter.service';
 import { ExampleDirective } from 'src/app/directives/example.directive';
-import { TestComponent } from './views/test/test.component';
 import { CommonModule } from '@angular/common';
 import { DetachService } from './service/authGuard.service';
 // import { ComponentsModule } from 'src/app/components/index.module';
@@ -37,7 +36,6 @@ const Pipes = []
     LayoutComponent,
     SimpleLayoutComponent,
     FooterComponent,
-    TestComponent,
     // SvgIconComponent
   ],
   imports: [

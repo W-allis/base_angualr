@@ -33,13 +33,13 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin() {
-    this.api.login(this.model).subscribe(res => {
-      console.dir(res)
-      this.token.setToken(res.headers.get('access-token'))
-      this.router.navigateByUrl('/user')
-    }, error => {
-      console.error(error)
-    })
+    this.router.navigateByUrl('/user')
+    // this.api.login(this.model).subscribe(res => {
+    //   console.dir(res)
+    //   this.token.setToken(res.headers.get('access-token'))
+    // }, error => {
+    //   console.error(error)
+    // })
   }
 
 }

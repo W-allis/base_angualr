@@ -10,17 +10,12 @@ const routes: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: '/user' }
 ];
 
-export const asyncRoutes: Routes = [
-  { path: 'user', component: LayoutComponent, loadChildren: './views/user/user.module#UserModule' },
-  { path: 'test', component: LayoutComponent, loadChildren: './views/test/test.module#TestModule' }
-]
-
 interface Array {
   concat(params: any): any
 }
 
 @NgModule({
-  imports: [RouterModule.forRoot((<Array>routes).concat(asyncRoutes))],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

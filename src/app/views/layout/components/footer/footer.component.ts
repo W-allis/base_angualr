@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { asyncRoutes } from 'src/app/app-routing.module';
+// import { asyncRoutes } from 'src/app/app-routing.module';
 // import { AsyncRouterService } from 'src/app/service/asyncRouter.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
   private activeTabIndex: number = 1
   placeHolder: string = 'block'
 
-  public asyncRouter = asyncRoutes
+  // public asyncRouter = asyncRoutes
 
   constructor(
     // public accessRoutes: AsyncRouterService
