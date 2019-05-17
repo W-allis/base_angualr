@@ -35,7 +35,7 @@ export class RequestUtil {
       },
       observe: 'response'
     }
-    
+    // console.log(options, merge.assign(options, headers))
     return merge.assign(options, headers)
   }
  

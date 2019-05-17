@@ -4,6 +4,7 @@ import { TestRoutingModule } from './test.routing.module';
 import { ExamplePipe } from '../../pipe/example.pipe';
 import { ComponentsModule } from 'src/app/components/index.module';
 import { UserApi } from 'src/app/api/user.api';
+import { AuthGuardService } from 'src/app/service/authGuard.service';
 
 const Pipes = [
   ExamplePipe
@@ -21,7 +22,6 @@ const Pipes = [
   exports: [
     // ComponentsModule
   ],
-  providers: [UserApi]
+  providers: [UserApi, AuthGuardService]
 })
-
-export class TestModule {} 
+export class TestModule { } 

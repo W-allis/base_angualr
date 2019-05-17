@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'projectAngular';
 
   constructor() {
-    console.log(environment.BASE_API)
+    // console.log(environment.BASE_API)
   }
 }

@@ -17,20 +17,21 @@ function complier(obj: { [key: string]: any }): Tree[] {
 
 function generate(oldValue: Tree[], newValue: Tree[]): Tree[] {
   const subs: Tree[] = []
-
+  // console.log(newValue, oldValue)
   oldValue.concat(newValue).forEach((item: Tree) => {
+    // console.log(item)
     const index = subs.findIndex(sub => sub.key === item.key)
     
-    if (index === -1) 
+    if (index === -1)
       subs.push(item)	
-    
+      // console.log(subs)
     if (index > -1 && subs[index].type === 'array' && item.type === 'array') 
       (<any[]>(subs[index].value)).push.apply(subs[index].value, item.value)
     
-    if (index > -1 && subs[index].type === 'object' && item.type === 'object') 
+    if (index > -1 && subs[index].type === 'object' && item.type === 'object')
       subs[index].child = generate(subs[index].child, item.child)
-    
-    if (index > -1) 
+
+    if (index > -1 && (subs[index].type !== 'object' || item.type !== 'object')) 
       subs.splice(index, 1, item)
   })
   
@@ -39,10 +40,8 @@ function generate(oldValue: Tree[], newValue: Tree[]): Tree[] {
 
 function analyze<T>(arr: Tree[]): T {
   let output: {} = { }
-  
   arr.forEach(item => {
     output[item.key] = item.type === 'object' ? analyze<T>(item.child) : item.value})
-
   return <T>output
 }
 

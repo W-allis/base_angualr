@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { merge } from '../../utils/merge.utils'
+import { Router } from '@angular/router';
 
 interface User {
   name: string
@@ -27,8 +28,9 @@ export class UserComponent implements OnInit {
     height: 10
   }
 
-  constructor() {
-    console.log(merge.assign(this.one, this.two))
+  constructor(private router: Router) {
+    console.log(router)
+    // console.log(merge.assign(this.one, this.two))
   }
 
   ngOnInit() {
