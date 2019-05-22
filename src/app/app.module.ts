@@ -16,7 +16,7 @@ import { FooterComponent } from './views/layout/components/footer/footer.compone
 import { AsyncRouterService } from './service/asyncRouter.service';
 import { ExampleDirective } from 'src/app/directives/example.directive';
 import { CommonModule } from '@angular/common';
-import { DetachService } from './service/authGuard.service';
+import { AuthGuardService } from './service/authGuard.service';
 // import { ComponentsModule } from 'src/app/components/index.module';
 // import { SvgIconComponent } from './components/svg-icon/svg-icon.component';
 
@@ -50,7 +50,7 @@ const Pipes = []
   exports: [
     // SvgIconComponent
   ],
-  providers: [ThemeService, AsyncRouterService, DetachService],
+  providers: [ThemeService, AsyncRouterService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
