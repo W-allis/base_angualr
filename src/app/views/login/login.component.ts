@@ -26,7 +26,11 @@ export class LoginComponent implements OnInit {
     public api: LoginApi,
     public token: TokenService,
     public router: Router
-  ) { 
+  ) {
+    this.model.name = '123'
+    setTimeout(_ => {
+      this.model.name = '321'
+    }, 1000)
   }
 
   ngOnInit() {

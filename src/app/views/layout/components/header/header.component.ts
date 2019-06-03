@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Route } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  title: string = ''
 
   show: boolean = false
   menuHeight: number = 64
@@ -31,9 +33,15 @@ export class HeaderComponent implements OnInit {
     ]
   }]
 
-  constructor(public router: Router) { }
+  constructor(public router: Router) {
+    // this.title = 
+  }
 
   ngOnInit() {
+    // console.log(this.router)
+    this.router.config.forEach(route => {
+      this.router.url.includes(route.path) && (this.title = (<Route & { meta: any }>route).meta && (<Route & { meta: any }>route).meta.title)
+    })
   }
 
   handleLeClick(e) {

@@ -1,5 +1,12 @@
 <div class="footer-container">
-  <!-- <div *ngFor="let route in asyncRoutes" class="placeholder">Block</div> -->
-  <div class="placeholder">Block</div>
-  <div class="placeholder">Block</div>
+  <div *ngFor="let route of filterRouteWithRedirect(routes)" [ngClass]="{ 'active': nowActive === route.path }" (click)="onTabClick(route)">
+    
+    <a [routerLink]="['/' + route.path]" routerLinkActive="router-link-active" >
+      <!-- <i [ngClass]="route.path"></i> -->
+      <div><app-svg-icon *ngIf="route.meta && route.meta.icon" [svgClass]="['route-icon', route.meta.icon]" [svgType]="route.meta.icon"></app-svg-icon></div>
+      {{route.meta.title}}
+    </a>
+  </div>
+  <!-- <div class="placeholder">Block</div>
+  <div class="placeholder">Block</div> -->
 </div>

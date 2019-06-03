@@ -18,7 +18,7 @@ export class SvgIconComponent implements OnInit {
   }
 
   get iconClass(): string {
-    return this.svgClass ? `icon ${this.svgClass}` : `icon`
+    return this.svgClass
   }
 
   get iconType(): string {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { merge } from '../../utils/merge.utils'
 import { Router } from '@angular/router';
 
@@ -17,7 +17,9 @@ interface Shape {
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('icon') icon: ElementRef
 
   private one: User = {
     name: 'alice'
@@ -34,6 +36,10 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    console.log(this.icon)
   }
 
 }

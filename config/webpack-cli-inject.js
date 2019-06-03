@@ -31,6 +31,6 @@ module.exports = (commonConfig, wco, cfgType) => {
   mergeConfig.module.rules.forEach(item => {
     console.log(item)
   })
-
+  console.log(mergeConfig)
   return mergeConfig
 }
